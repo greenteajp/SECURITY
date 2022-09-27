@@ -1,6 +1,18 @@
 DAY1: RECON
 (From grayhost)
+Ping sweep
 192.168.28.1 ,2, 3, 97, 98, 99, 100, 105, 111, 120,129, 130, 131
+ 105: 21, 2222, 23
+  flag pulled: 7UkU9jIHdaMd90mZNomc (file on ftp)
+  111:80 (consulting.site.donovia), 8080  (conference.site.donovia), 2222
+  100:2222
+  120:4242(ssh)
 192.168.150.225 ,226, 227
+
+
+
+
+
+
 
 
