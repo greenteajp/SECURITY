@@ -1,0 +1,47 @@
+09/27/2022
+
+http://10.50.22.9:8000/:  
+        DOJO-006-M: Greentea9911$$
+ssh student@10.50.38.82 -Y (LINOPS)
+grayhost: 10.50.37.221  3t6RPW1ejaWtWC0 (password) (dont log in from greyhost, only from linops)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PENETRATION TESTING OVERVIEW:
+  ??? check student guide...
+  
+  
+  
+VULNERABILITY AND EXPLOITATION RESEARCH:
+  Initial access: 
+    Phishing is the most common way.
+    Initial access if first hook into sys (whatever method).
+  Research:
+    Majority of research immediately after recon.
+    Research outdated protocols, services, OS.  
+      Multi-Source:
+        Databases, exploit-DB, CVE's, online articles, MITRE
+  Testing:
+    Testing exploitations on own stations to verify validitiy of exploits/attacks. Paste-its.
+    
+  RECON:
+    Collections and Use:
+      Social Media, Web Data, Sensitive data, Public Accessible, Domain and IP Addr Data collections.
+    
+  HTML:
+    stnd markup language for browser interp of webpages
+      clien-side interpret (web browser)
+      Utilizes elements (ident by tags)
+      Typically redirects to another page for server-side interac
+      Cascading Stylesheets(CSS) for page themeing
+      
+
+
+
+
+
+
+
+
+
+
+
