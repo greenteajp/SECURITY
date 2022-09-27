@@ -35,21 +35,25 @@ VULNERABILITY AND EXPLOITATION RESEARCH:
       Cascading Stylesheets(CSS) for page themeing
       
   ***Scanning Tech:
-     Host Disc:
+     1:) Host Disc:
         Ping sweep (run on closest to network trying to scan)
              for i in {1..254}; do (ping -c 1 192.168.1.$i | grep "bytes from" &); done
                          ^change based on cidr    ^change based on tgt ip       
-     Host Enum:   
+     2:) Host Enum:   
         Scan for ports 21-25,80 ; 0-1023 ; abnormal ports 
         For single targets (run at max 3 times):
                 nmap -Pn -T4 <ip> -p21-23,80,8080,8888,2222,4444 
-     Host Interr:
-        NC/Banner grabbing, double check ports
+     3:) Host Interr:
+        NC/Banner grabbing,nikto, nmap double check ports
                 nc <ip> <port> (banner grabbing to check if port is the known protocol,etc)
-
-
-
-
+                nmap -sV <ip> -p <ports>
+                nikto -h <ip> -p <ports>
+                
+     ***NMAP Scripting Engine:
+       /usr/share/nmap/scripts
+       nmap -Pn -T4 <ip> -p <ports> --script=banner.nse 
+                                    --script=http-enum.nse
+       nmap -p 445 --script smb-os-discovery <IP/subnet>
 
 
 
