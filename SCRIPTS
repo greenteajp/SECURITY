@@ -1,0 +1,18 @@
+Scraping Data, html
+  #!/usr/bin/python
+  ### Imports ###
+  import lxml.html
+  import requests
+   
+  ### Grabs the webpage ###
+  page = requests.get('http://quotes.toscrape.com')
+  tree = lxml.html.fromstring(page.content)
+   
+  ### Outlines the tag you want to grab ###
+  # Change //small[...[ to whatever tag. Leave /text() as is
+  results = tree.xpath('//small[@class="author"]/text()')
+  
+  ### Prints it out ###
+  print ('Results: ',results)
+  
+  
