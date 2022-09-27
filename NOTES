@@ -34,6 +34,13 @@ VULNERABILITY AND EXPLOITATION RESEARCH:
       Typically redirects to another page for server-side interac
       Cascading Stylesheets(CSS) for page themeing
       
+  Scanning Tech:
+     Host Disc:
+        Ping sweep
+     Host Enum:   
+        Scan for ports 21-25,80 ; 0-1023 ; abnormal ports 
+     Host Interr:
+        NC/Banner grabbing, double check ports
 
 
 
