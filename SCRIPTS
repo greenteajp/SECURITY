@@ -61,6 +61,7 @@ cat to verify
  mkdir /users/home/directory/.ssh  (/var/www/.ssh)
  
 
+ ssh -i .ssh/id_rsa www-data@10.50.37.95
 
 
 
