@@ -54,6 +54,62 @@ VULNERABILITY AND EXPLOITATION RESEARCH:
        nmap -Pn -T4 <ip> -p <ports> --script=banner.nse 
                                     --script=http-enum.nse      (use to enum well known paths/dir from websites)
        nmap -p 445 --script smb-os-discovery <IP/subnet>        (OS, computer name, netbios name, domain)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+WEB EXPLOITATION DAY1 (XSS):
+   Server/Client Relat
+     synchronous comms btw user and serv
+     not all data is not returned, client only rec what is allowed
+   HTTP
+     Request/Response, view with tcpdump, wireshark, developer console
+     Methods: GET, POST, HEAD, PUT
+     Response Codes:
+        10XX , info
+        2XX, Success
+        30X, redir
+        4XX, client err
+        5XX, Server err
+     
+   JS Interaction
+   'function'
+
+   HTTP Enum
+      ROBOTS.TXT
+      Legit surfing
+      Tools:
+        NSE scripts
+        Nikto
+        burp suite
+   
+***Cross-Site Scripting (XSS):
+      Reflected XSS
+         most common form on XSS
+         transient, occurs in error msgs or search results
+         deliv thru intermed media, link in email
+         char that are normally illegalin URLs can be Base64
+      Stored XSS
+         resides on vuln site
+         only requires user to visit page
+                        <img src="http://invalid" onerror="window.open('http://10.50.XX.XX:8000/ram.png','xss','height=1,width=1');">
+
+  Useful JavaScript Components
+        <script>alert('XSS');</script>
+    Capturing Cookies
+    document.cookie
+    Capturing Keystrokes
+        bind keydown and keyup
+    Capturing Sensitive Data
+    document.body.innerHTML
+
+  Server-Side injection
+        Dir Path/ Path Traversal
+        Ability to read/execute outside web server's dir
+        uses ../../ (rel path) in manipul a server-side paths
+  Malicious File Upload
+        site allows unsanitized file uploads
+  Command Injection:
+        app on server is vuln, allowing exec of arbit commands
+        run following to chain/stack our arbitrary command - ;cat /etc/passwd
+
 
 
 
