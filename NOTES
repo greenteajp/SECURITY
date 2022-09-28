@@ -52,8 +52,9 @@ VULNERABILITY AND EXPLOITATION RESEARCH:
      ***NMAP Scripting Engine:
        /usr/share/nmap/scripts
        nmap -Pn -T4 <ip> -p <ports> --script=banner.nse 
-                                    --script=http-enum.nse      (use to enum well known paths/dir from websites)
+                                    --script=http-enum.nse <ip> -p <port>      (use to enum well known paths/dir from websites)
        nmap -p 445 --script smb-os-discovery <IP/subnet>        (OS, computer name, netbios name, domain)
+       
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 WEB EXPLOITATION DAY1 (XSS):
    Server/Client Relat
@@ -76,8 +77,8 @@ WEB EXPLOITATION DAY1 (XSS):
       ROBOTS.TXT
       Legit surfing
       Tools:
-        NSE scripts
-        Nikto
+        NSE scripts nmap --script=http-enum.nse <ip> -p <port>
+        Nikto - nikto -host <ip>
         burp suite
    
 ***Cross-Site Scripting (XSS):
