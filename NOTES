@@ -110,6 +110,97 @@ WEB EXPLOITATION DAY1 (XSS):
   Command Injection:
         app on server is vuln, allowing exec of arbit commands
         run following to chain/stack our arbitrary command - ;cat /etc/passwd
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+WEB EXPLOITATION DAY2 (SQL):
+Common commands:
+      SELECT, UPDATE, DELETE, CREATE, DROP
+        
+*SELECT
+Extracts data from a database
+
+*UNION
+Used to combine the result-set of two or more SELECT statements
+
+*USE
+Selects the DB to use
+
+UPDATE
+Updates data in a database
+
+DELETE
+Deletes data from a database
+
+INSERT INTO
+Inserts new data into a database
+
+CREATE DATABASE
+Creates a new database
+
+ALTER DATABASE
+Modifies a database
+
+CREATE TABLE
+Creates a new table
+
+ALTER TABLE
+Modifies a table
+
+DROP TABLE
+Deletes a table
+
+CREATE INDEX
+Creates an index (search key)
+
+DROP INDEX
+Deletes an index
+        
+
+COMMON SYNTAX:
+
+mysql (initiates sql database)
+show databases;  (; ends/executes command(s))
+show tables from session; (session = database)
+select * from session.<table>;
+
+select tireid,name,cost from session.<table>;        
+
+use <database> ( changes current location to that database)
+show tables;
+select * from <table>        
+
+
+
+
+
+Activity Examples:
+SELECT DISTINCT director FROM movies
+ORDER BY director ASC;
+
+SELECT title, year FROM movies
+ORDER BY Title asc
+LIMIT 5;
+
+SELECT title, year FROM movies
+ORDER BY Title asc
+LIMIT 5 OFFSET 5;
+
+SELECT title, director FROM movies 
+WHERE title LIKE "Toy Story%";
+
+
+SELECT * FROM north_american_cities
+where country like "United%"
+order by latitude desc;
+
+SELECT city, longitude FROM north_american_cities
+WHERE longitude < -87.629798
+ORDER BY longitude ASC;
+
+SELECT *FROM north_american_cities
+where country = "Mexico"
+order by population desc
+LIMIT 2;
+
 
 
 
