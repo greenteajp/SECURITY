@@ -169,9 +169,6 @@ show tables;
 select * from <table>        
 
 
-
-
-
 Activity Examples:
 SELECT DISTINCT director FROM movies
 ORDER BY director ASC;
@@ -200,6 +197,32 @@ SELECT *FROM north_american_cities
 where country = "Mexico"
 order by population desc
 LIMIT 2;
+
+SELECT *FROM north_american_cities
+WHERE country LIKE "United%
+ORDER BY population DESC
+LIMIT 2 OFFSET 2;
+
+
+
+SQL Injections:
+    Information_Schema
+    GET vs POST Request HTTP methods
+    
+    POST
+    <user>' OR '1=1 in password fields
+
+    GET
+        need fields
+    <weblocation>/login.php?username=Admin&passwd=user' OR '1=1
+
+
+
+
+
+
+
+
 
 
 
