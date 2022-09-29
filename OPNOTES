@@ -7,9 +7,15 @@ Ping sweep
   111:80 (consulting.site.donovia), 8080  (conference.site.donovia), 2222
   100:2222
   120:4242(ssh)
-192.168.150.225 ,226, 227
+192.168.150.225 ,226, 227, 245
 
 
 
 
 
+Web EXPLOIT:
+10.100.28.40 
+80, 
+4444
+
+10.100.28.55
