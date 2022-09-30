@@ -243,8 +243,43 @@ custom query                    Selection=2 UNION select name,type,cost from ses
             What are the 3 default
         Make query based on custom Tables + columns
             UNION select ..,..,.. from customtable.customcolumn;#
-
-
+---------------------------------------------------------------------------------------------------------------------------------------
+REVERSE ENGINEERING:
+   X86_64 Assembly
+    16 general purpose 64-bit reg
+    r 64, e 32, non 16
+     %rax, first returnregister/value
+     %rbp, base pointer that keeps track of the base of the stack
+     %rsp, stack pointer that points to the top of stack
+     %rip, instruction pointer, holds address for next intruction to be executed
+     
+     Heap, dynamically allocated and deall
+     Stack, "Pez" dispenser, 
+     
+     Common Instruction Pointers
+       JZ
+       JNZ
+        
+     Reverse Engineering Workflow ( Software)
+      Static:
+        1. Determine file type - Is it an executable? What environment is it designed to run in? (OS,cpu
+           architecture, etc)
+        2. Determine if file is packed/compressed (UPX)
+        3. Find plain text ascii and unicode strings
+        4. View imports/exports to get a hint of functionality/calls (is it importing a library that can open a
+           socket, etc?)
+        5. Look for encrypted sections of the binary
+      Behavioral:
+        Mod 16 stuff, How the malware runs
+      Dynamic:
+        1. GDB debuggers
+      Disassembly:
+        1. IDA/GHIDRA, find artifacts
+      Documnet Findings:
+        1. Discovered binary traits, capabilities,
+        2. docu potential uses for binary, create signatures/mitigations
+        3. docu & save tools, scripts, code, methods used to analyze
+        
 
 
 
