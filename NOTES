@@ -248,7 +248,7 @@ REVERSE ENGINEERING:
    X86_64 Assembly
     16 general purpose 64-bit reg
     r 64, e 32, non 16
-     %rax, first returnregister/value
+     %rax, first return register/value
      %rbp, base pointer that keeps track of the base of the stack
      %rsp, stack pointer that points to the top of stack
      %rip, instruction pointer, holds address for next intruction to be executed
@@ -282,8 +282,11 @@ REVERSE ENGINEERING:
         
 
 
-
-
+   IDA Stuff:
+       ebp+var , usually equates to user input   
+       
+   Ghidra:
+        param_1, usually equates to user input
 
 
 
