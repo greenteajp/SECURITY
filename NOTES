@@ -327,7 +327,7 @@ EXPLOIT DEVELOPMENT:
       default gdb
       env - gdb <filename>                      (or "file<file>" in gdb to load)
       show env
-      unset LINES/COLUMNS
+      unset env LINES/COLUMNS
       info proc map             -> find /b <hex for start under heap>, <end hex above stack>, 0xff, 0xe4
                                 opcode for jmp = 0xff, esp = 0xe4
       grab a bunch of hex from above find ^, paste in python script, comment out old eip. Split hex in two bytes ie - 0xf7 f6...
