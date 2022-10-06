@@ -394,13 +394,45 @@ POST EXPLOITATION:
         ip route - routing table      - ip to mac resolution
         netstat -r / route
    
-     cat /proc/cpuinfo
-     lsmod - kernel modules
+       cat /proc/cpuinfo
+       lsmod - kernel modules
 
     Data Exfiltration:
         
 
 
+  Commands WINDOWS:
+     
+     Post Exploitation:
+        net user <user>/ get-localuser       - user enum, shows all users on box ( like /etc/passwd)
+          get-localuser | select name, id
+                        | get-member            -what you can do with object/command
+          get-localgroup   -groups and descriptions
+        
+        tasklist /v         -shows processes ( like ps -elf)
+        get-process
+                    | where-object {$_.ID -le 1000}
+        
+        tasklist /svc  / net start ( started services)     -shows services
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
 
 
 
