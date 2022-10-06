@@ -9,13 +9,20 @@ Ping sweep
   111:80 (consulting.site.donovia), 8080  (conference.site.donovia), 2222     comrade::StudentWebExploitPassword
   100:2222      comrade::StudentMidwayPassword 2222
   120:4242(ssh)
+  99: 53
+  98: 53
+  2: 53
+  3: 53
+  97:
+  
+  
+  
+  
   
   
   
 192.168.150.225 ,226, 227, 245
 
-386F4337
-0x625012a0
 
 
 Web EXPLOIT:
