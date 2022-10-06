@@ -366,26 +366,39 @@ EXPLOIT DEVELOPMENT:
       set lhost = linops/0.0.0.0
       lport = lport matching the msfvenom lport
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+POST EXPLOITATION:
+  Commands LINUX:
+  
+    Post Exploitation; awareness
+     /etc/passwd, /etc/shadow
+     last - last logon/currently logon
+     who - who is currently logged on
+     groups - what groups current shell/user is apart of
+     id - user/group id of user that ran the command
+     ps -elf
+        -auxf ; shows tree
+     pstree
+     lsof - gives open files that process uses
    
+     ps -p 1
+       
+     systemctl list-units --type service (sysD)
+     systemctl list-units --type=service | grep running
+     
    
+     Net Info:
+        ifconfig        -ip for int, basic netinfo
+        netstat -antlp          - open connections/listenings, etc.
+        arp -an 
+        ip route - routing table      - ip to mac resolution
+        netstat -r / route
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+     cat /proc/cpuinfo
+     lsmod - kernel modules
 
-
+    Data Exfiltration:
+        
 
 
 
