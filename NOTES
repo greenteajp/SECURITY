@@ -426,17 +426,32 @@ Obfuscation - Slides/FG
          systeminfo             -bios,domain,pc, os version ,hostname info, etc
         
         
+    SSH Multiplexing:
+        ssh -M -S ~/.ssh/cm/gray student@10.50.37.221
+
+        
+        ssh -S ~/.ssh/cm/gray grayhost      ## access socket made/make
+                         <must name it ^ >
         
         
+        ssh -M -S ~/.ssh/cm/gray -o "ControlPersist=10m" student@10.50.37.221        ###netstat -nt | awk '$5 ~ /:22$/'    checks to see if conn is still estab
+                                        ### connection remains open for 10 mins after exiting
         
         
-        
-        
-        
-        
-        
-        
+        ssh -O forward -L 1111:10.100.28.48:80 -S ~/.ssh/cm/gray nla                            --tunnel to acess ttp server on 48
+
     
+        close ports, but keep pivot
+                ssh -O cancel   ( instead on forward) on same syntax to close that tunnel
+
+         delete entire socket:
+                ssh -O exit -S ~/.ssh/cm/gray grayhost
+
+
+
+
+
+
 
 
 
