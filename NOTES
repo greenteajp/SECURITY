@@ -42,7 +42,8 @@ VULNERABILITY AND EXPLOITATION RESEARCH:
      2:) Host Enum:   
         Scan for ports 21-25,80 ; 0-1023 ; abnormal ports 
         For single targets (run at max 3 times):
-                nmap -Pn -T4 <ip> -p21-23,80,8080,8888,2222,4444 
+                
+                -Pn -T4 <ip> -p21-23,80,8080,8888,2222,4444 
      3:) Host Interr:
         NC/Banner grabbing,nikto, nmap double check ports
                 nc <ip> <port> (banner grabbing to check if port is the known protocol,etc)
@@ -426,7 +427,7 @@ Obfuscation - Slides/FG
          systeminfo             -bios,domain,pc, os version ,hostname info, etc
         
         
-    SSH Multiplexing:
+    ******SSH Multiplexing:******
         ssh -M -S ~/.ssh/cm/gray student@10.50.37.221
 
         
