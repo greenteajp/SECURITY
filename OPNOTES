@@ -6,8 +6,11 @@ Ping sweep
  105: 21, 2222, 23    comrade::StudentReconPassword
   flag pulled: 7UkU9jIHdaMd90mZNomc (file on ftp)
   111:80 (consulting.site.donovia), 8080  (conference.site.donovia), 2222     comrade::StudentWebExploitPassword
-  100:2222
+  100:2222      comrade::StudentMidwayPassword 2222
   120:4242(ssh)
+  
+  
+  
 192.168.150.225 ,226, 227, 245
 
 386F4337
