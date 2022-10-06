@@ -447,11 +447,16 @@ Obfuscation - Slides/FG
          delete entire socket:
                 ssh -O exit -S ~/.ssh/cm/gray grayhost
 
+    
+
+       ssh -M -S ~/.ssh/cm/T1 comrade@0.0.0.0 -p2222
+
+        scp -o "ControlPath=~/.ssh/cm/gray" palceholder:/path/path/<file>
+        
+        ssh -S ~/.ssh/cm/gray placeholder -D 9050
 
 
-
-
-
+        
 
 
 
