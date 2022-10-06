@@ -368,6 +368,8 @@ EXPLOIT DEVELOPMENT:
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 POST EXPLOITATION:
+Obfuscation - Slides/FG
+
   Commands LINUX:
   
     Post Exploitation; awareness
@@ -414,12 +416,14 @@ POST EXPLOITATION:
                     | where-object {$_.ID -le 1000}
         
         tasklist /svc  / net start ( started services)     -shows services
+        get-service | where {$_.status -eq "running"}      -shows running services
         
-        
-        
-        
-        
-        
+        Net:
+         ipconfig /all       -Win ip config, eth info
+         netstat -anob       -Ports, program casuing port/connection.  PID/PPID. States
+         arp -a              -arp cahce, mac-> ip resol
+         route print         -displays routing table
+         systeminfo             -bios,domain,pc, os version ,hostname info, etc
         
         
         
