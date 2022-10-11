@@ -4,7 +4,7 @@ linops - 10.50.38.82
 (From grayhost)10.50.37.221
 Ping sweep
 192.168.28.1 ,2, 3, 97, 98, 99, 100, 105, 111, 120,129, 130, 131
- 105: 21, 2222, 23    comrade::StudentReconPassword
+ 105: 21, 2222, 23    comrade::StudentReconPassword , comrade :: StudentReconPassword
   flag pulled: 7UkU9jIHdaMd90mZNomc (file on ftp)
   111:80 (consulting.site.donovia), 8080  (conference.site.donovia), 2222     comrade::StudentWebExploitPassword
   100:2222      comrade::StudentMidwayPassword 2222
@@ -13,16 +13,17 @@ Ping sweep
   98: 53
   2: 53
   3: 53
-  97:
+ 
   
   
-  
-  
+  192.168.28.27 - 22 comrade :: StudentPrivPassword
+  192.168.28.12      comrade :: StudentPrivPassword 
   
   
   
 192.168.150.225 ,226, 227, 245
 
+192.168.150.253 - Dovonian-Intranet, 3201, 514, 80   -> 192.168.56.1 (badguy) 514,
 
 
 Web EXPLOIT:
