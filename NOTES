@@ -458,6 +458,16 @@ Obfuscation - Slides/FG
 
 
         
+
+
+
+
+
+
+
+
+
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 LINUX EXPLOITATION:   
  Priv Esc:
@@ -521,8 +531,8 @@ LINUX EXPLOITATION:
      awk '/opened' /var/log/auth.log
 
     
-
-
+cat /etc/shadow
+john --wordlist=Mywordlist.txt shadowfile
 
 
 
