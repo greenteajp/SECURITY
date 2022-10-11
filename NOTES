@@ -458,6 +458,78 @@ Obfuscation - Slides/FG
 
 
         
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+LINUX EXPLOITATION:   
+ Priv Esc:
+    sudo -l
+    suid/sgid    find / -type f -perm /4000 -ls 2>/dev/null (suid)(guid, 2000)
+    GTFObins:
+     sudo apt-get changelog apt
+     !/bin/sh
+        
+  Insecure Permissions:
+    CRON
+     scripts made to run in CRON jobs
+     cat /etc/crontab
+             /cron
+     /var/spool/cron/crontabs  
+     /etc/cron.d
+    World-Writable Files and directories
+     /tmp
+     /var/tmp
+   
+    Dot "." in PATH
+        $PATH, make script in location in $PATH (#!/bin/bash)
+        
+  Persistence:
+    Adding/Hijacking User Account    
+    Boot Process Persistence
+        
+  Plan:
+    unset HISTFILE     echo "" > $HISTFILE   
+    type of init system  ls -latr /rpoc/1/exe  ; stat /sbin/init
+    syslog
+    rsyslog
+      
+    auditing systemV
+      ausearch -p 22
+               -m USER_LOGIN -sv no
+               -ua edwards -ts yesterday -te now -i
+        
+    auditing systemD
+      journalctl _TRANSPORT=audit
+                 _TRANSPORT=audit | grep 603
+        
+        
+    Logs for covering tracks:
+     auth.log/secure (logins/authentications)
+     lastlog  (each users' last successful login time)
+     btmp   (bad login attemps)
+     sulog  (usage of SU command)
+     utmp   (currently logged in users (W commands))
+     wtmp   (perm record of user on/off)
+     
+    Working with Logs: 
+     file /var/log/wtmp
+     find /var/log -type f -mmin -10 2>/dev/null
+     journalctl -f -u ssh
+     journalctl -q SYSLOG_FACILITY=10 SYSLOG_FACILITY=4
+                --vacuum-time=10m (cleans last ten minutes)
+         
+    Reading Files:  
+     cat /var/log/auth.log | egrep -v "opened|closed"
+     awk '/opened' /var/log/auth.log
+
+    
+
+
+
+
+
+
+
+
+
 
 
 
