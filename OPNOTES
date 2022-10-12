@@ -16,14 +16,15 @@ Ping sweep
  
   
   
-  (lin2) 192.168.28.27 - 22     comrade :: StudentPrivPassword
+  (lin2) 192.168.28.27 - 22     comrade :: StudentPrivPassword    ghjcnbnenrf      (zeus)
+
   (lin1) 192.168.28.12 - 22     comrade :: StudentPrivPassword 
-  
-  
+          
+           192.168.28.9  - 5040, 139,445, 135
   
 192.168.150.225 ,226, 227, 245
 
-192.168.150.253 - Dovonian-Intranet, 3201, 514, 80   -> 192.168.56.1 (badguy) 514,
+192.168.150.253 - Dovonian-Intranet, 3201, 514, 80   -> 192.168.56.1 (badguy) 514, (beacon)
 
 
 Web EXPLOIT:
