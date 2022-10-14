@@ -1,5 +1,7 @@
-
-
+ Passwords may be encoded: Rot 13, Base64, Magic
+ Ping Sweep
+   for i in {1..254}; do (ping -c 1 192.168.1.$i | grep "bytes from" &); done   (must be in bash shell)
+   
 NMAP Scripting Engine:
        nmap -Pn -T4 --min-rate 2435434 <IP> -p-
        /usr/share/nmap/scripts
@@ -10,7 +12,9 @@ NMAP Scripting Engine:
        nikto -h <ip> -p <ports>
        
        
+       
       /etc/hosts ;  ip neigh as a last resort
+      
    Directory Traversal or Command Injection, for input fields.
     Command Inj
       ;whoami, 
@@ -31,17 +35,12 @@ NMAP Scripting Engine:
      cat /users/home/directory/.ssh/authorized_keys
 
  
-                                                  
    
-   Passwords may be encoded: Rot 13, Base64, Magic
-   
-   
-   
-   When on the box to escalate priv:
+   When on LIN box to escalate priv:
    find / -type f -perm /4000 -ls 2>/dev/null (suid)(guid, 2000)
+   sudo -l
+   GTFObins
    
-   Ping Sweep
-   for i in {1..254}; do (ping -c 1 192.168.1.$i | grep "bytes from" &); done   (must be in bash shell)
    
    SQL INJ:
    GET:
