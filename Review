@@ -40,7 +40,7 @@ NMAP Scripting Engine:
  
    
    When on LIN box to escalate priv:
-   find / -type f -perm /4000 -ls 2>/dev/null (suid)(guid, 2000)
+   find / -type f -perm /4000 -ls 2>/dev/null (suid)(guid, 4000)Both 6000
    sudo -l
    GTFObins
    
